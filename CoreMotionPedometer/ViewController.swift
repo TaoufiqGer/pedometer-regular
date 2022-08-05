@@ -22,6 +22,7 @@ class ViewController: UIViewController {
             pedometer.startUpdates(from: Date()) { pedometerData, error in
                 if let pedometerData = pedometerData {
                     self.distance.text = pedometerData.distance?.stringValue
+                    print(pedometerData.distance?.stringValue ?? "no value")
                 }
             }
             
